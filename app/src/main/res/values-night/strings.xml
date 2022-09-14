@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="say_hi">Hi, this is Chatbot 001, How may I help you?</string>
+    <string name="say_hi_by_chat_bot">Hi this is Chatbot</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_textsize">33sp</dimen>
+    <dimen name="medium_text_size">33sp</dimen>
+</resources>

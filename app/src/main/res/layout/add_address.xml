@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_add_address"
+        android:text="@string/add_address"
+        android:gravity="center"
+        style="@style/BasicTextViewStyle"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_address_title"
+        android:hint="@string/address_title"
+        app:layout_constraintTop_toBottomOf="@id/txt_add_address"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_address"
+        android:hint="@string/enter_address"
+        app:layout_constraintTop_toBottomOf="@id/edt_address_title"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:background="@drawable/support_btn_bg"
+        android:text="@string/cancel"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/edt_address"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="100sp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSave"
+        android:background="@drawable/support_btn_bg"
+        android:text="@string/save"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/edt_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="100sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

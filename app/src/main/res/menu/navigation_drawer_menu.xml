@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_page"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home_page"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/nav_cart_page"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/cart_details"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/nav_order_page"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/order_page"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/logout"
+            app:showAsAction="always"/>
+    </group>
+
+</menu>

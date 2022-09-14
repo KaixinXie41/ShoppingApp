@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/fragment_home_page">
+    <fragment
+        android:id="@+id/nav_home_page"
+        tools:layout ="@layout/fragment_home_page"
+        android:label="Homepage"
+        android:name="com.example.shoppingappproject.view.home.homepage.HomePageFragment">
+        <action
+            android:id="@+id/action_next"
+            app:destination="@+id/nav_sub_category_page"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_search"
+            app:destination="@id/nav_search"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sub_category_page"
+        tools:layout="@layout/fragment_sub_category"
+        android:label="SbuCategory"
+        android:name="com.example.shoppingappproject.view.home.subcategory.SubCategoryFragment">
+        <action
+        android:id="@+id/action_product_details"
+        app:destination="@id/nav_product_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="categoryId"
+            app:argType="string"
+            android:defaultValue="1"/>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_search"
+        tools:layout="@layout/fragment_search"
+        android:label="Search"
+        android:name="com.example.shoppingappproject.view.home.SearchFragment">
+        <action
+            android:id="@id/action_product_details"
+            app:destination="@id/nav_product_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_product_details"
+        tools:layout="@layout/fragment_products_details"
+        android:label="Product Details"
+        android:name="com.example.shoppingappproject.view.home.product.ProductDetailsFragment">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="1"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cart_page"
+        tools:layout="@layout/fragment_cart"
+        android:label="Cart List"
+        android:name="com.example.shoppingappproject.view.cart.CartFragment">
+        <action
+            android:id="@id/action_product_details"
+            app:destination="@id/nav_product_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_place_order"
+            app:destination="@id/nav_checkout_page"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_checkout_page"
+        tools:layout="@layout/fragment_checkout"
+        android:label="Order"
+        android:name="com.example.shoppingappproject.view.cart.CheckoutFragment">
+        <action
+            android:id="@+id/action_finish_order"
+            app:destination="@+id/nav_cart_page"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_order_page"
+        tools:layout="@layout/fragment_order"
+        android:name="com.example.shoppingappproject.view.Order.OrderFragment"
+        android:label="@string/order">
+        <action
+            android:id="@+id/action_order_details"
+            app:destination="@id/nav_order_details_page"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_order_details_page"
+        tools:layout="@layout/fragment_order_details"
+        android:name="com.example.shoppingappproject.view.Order.OrderFragmentDetails"
+        android:label="@string/order_details">
+        <argument
+            android:name="orderId"
+            android:defaultValue="1"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>

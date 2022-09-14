@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".view.home.product.ProductDetailsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_product_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_product_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_name"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RatingBar
+                android:id="@+id/ratingBar_product_details"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="@color/blue"
+                android:rating="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_product_details_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_decs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_product_details_name" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/product_detail_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/txt_product_details_desc" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_product_details_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/product_detail_image_view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/blue"
+                android:textSize="15sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_add_to_cart_from_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="#0895F9"
+                android:src="@drawable/ic_baseline_plus_one_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnMin"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="#0895F9"
+                android:src="@drawable/ic_baseline_exposure_neg_1_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProduct_count"
+                android:text="@string/count"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnMin"
+                app:layout_constraintEnd_toStartOf="@id/btnPlus"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_parameters_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_parameters"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_product_detail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="8"
+            app:layout_constraintTop_toBottomOf="@id/txt_parameters_details"
+            tools:listitem="@layout/view_product_parameters" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_customer_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_review"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView_parameters" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView_customer_review"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_customer_review"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/view_user_review" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

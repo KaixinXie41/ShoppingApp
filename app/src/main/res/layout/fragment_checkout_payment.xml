@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.cart.CheckoutPaymentFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_select_payment"
+        android:text="@string/select_payment"
+        style="@style/BasicTextViewStyle"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_group_payment"
+        app:layout_constraintTop_toBottomOf="@id/txt_select_payment">
+        <RadioButton
+            android:id="@+id/rtn_cod"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_payment_1"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/rtn_oba"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_payment_2"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rtn_dc_cc"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_payment_3"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rtn_paypal"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_payment_4"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payment_btnNext"
+        android:text="@string/next"
+        android:layout_margin="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/radio_group_payment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/btn_long_bg"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
