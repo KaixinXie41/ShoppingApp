@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), LogoutMVP.LogoutView {
                     }
                 }
                 else -> {
-                    menuItem.onNavDestinationSelected(findNavController(R.id.fragment_home_page))
+                    menuItem.onNavDestinationSelected(findNavController(R.id.nav_host_fragment))
                             ||super.onOptionsItemSelected(menuItem)
                     drawerLayout.closeDrawer(GravityCompat.START)
                 }
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), LogoutMVP.LogoutView {
         nHEmail.text = sharedPreferences.getString(LoginActivity.USER_EMAIL,LoginActivity.USER_EMAIL)
         nHPhone.text = sharedPreferences.getString(LoginActivity.USER_MOBILE,LoginActivity.USER_MOBILE)
 
-        val navHost : NavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_home_page) as
+        val navHost : NavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as
                 NavHostFragment
         val navController = navHost.navController
         val drawerLayout : DrawerLayout?= findViewById(R.id.drawer_layout)
