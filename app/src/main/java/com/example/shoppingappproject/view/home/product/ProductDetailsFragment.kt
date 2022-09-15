@@ -14,16 +14,18 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.shoppingappproject.model.remote.data.productDetails.Parameters
+import com.example.shoppingappproject.model.remote.data.productDetails.Specification
 import com.example.shoppingappproject.model.remote.data.productDetails.ProductDetailResponse
 import com.example.shoppingappproject.R
 import com.example.shoppingappproject.model.local.CartDao
 import com.example.shoppingappproject.model.local.CartProduct
 import com.example.shoppingappproject.model.remote.VolleyHandler
+import com.example.shoppingappproject.model.remote.data.productDetails.Image
 import com.example.shoppingappproject.model.remote.data.productDetails.Review
 import com.example.shoppingappproject.presenter.productDetail.ProductDetailsMVP
 import com.example.shoppingappproject.presenter.productDetail.ProductDetailsPresenter
 import com.example.shoppingappproject.view.home.ParametersAdapter
+import com.example.shoppingappproject.view.home.ReviewAdapter
 import com.google.android.material.progressindicator.CircularProgressIndicator
 
 class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView {
@@ -32,9 +34,12 @@ class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView 
     lateinit var currentView:View
     lateinit var productId:String
     private lateinit var cartDao:CartDao
-    lateinit var parametersList:ArrayList<Parameters>
-    lateinit var parametersAdapter: ParametersAdapter
+    lateinit var specificationList:ArrayList<Specification>
     lateinit var reviewList:ArrayList<Review>
+    lateinit var parametersAdapter: ParametersAdapter
+    lateinit var reviewAdapter:ReviewAdapter
+    lateinit var imageList:ArrayList<Image>
+    lateinit var Imageadapter : ProductsDetailsAdapter
     private val args : ProductDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -60,35 +65,32 @@ class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView 
     override fun setResult(productDetailResponse: ProductDetailResponse?) {
         productDetailResponse?.let {
             val product = productDetailResponse.product
-            currentView?.let{
+            currentView.let{
+                Log.e("product", "$product")
                 val productDetailsName: TextView = currentView.findViewById(R.id.txt_product_details_name)
                 val ratingBar: RatingBar = currentView.findViewById(R.id.ratingBar_product_details)
                 val productDesc: TextView = currentView.findViewById(R.id.txt_product_details_desc)
-                val imgProductViewPage: ViewPager2 = currentView.findViewById(R.id.product_detail_image_view)
-                val ProductPrice: TextView = currentView.findViewById(R.id.txt_product_details_price)
-                val AddToCart: TextView = currentView.findViewById(R.id.txt_add_to_cart)
+                val productPrice: TextView = currentView.findViewById(R.id.txt_product_details_price)
+                val addToCart: TextView = currentView.findViewById(R.id.txt_add_to_cart)
                 val layoutAddItem: ConstraintLayout = currentView.findViewById(R.id.layout_add_to_cart_from_product_details)
                 val btnAddProduct: ImageButton = currentView.findViewById(R.id.btnPlus)
                 val tvProductDetailCount: TextView = currentView.findViewById(R.id.txtProduct_count)
                 val btnSubProduct: ImageButton = currentView.findViewById(R.id.btnMin)
                 val recyclerViewParameters: RecyclerView = currentView.findViewById(R.id.recyclerView_parameters)
                 val recyclerViewCustomerReview: RecyclerView = currentView.findViewById(R.id.recycleView_customer_review)
-
+                val recyclerViewImage:RecyclerView = currentView.findViewById(R.id.recyclerView_product_details_image)
 
                 productDetailsName.text = product.product_name
                 ratingBar.rating = product.average_rating.toFloat()
                 productDesc.text = product.description
-                ProductPrice.text = product.price
+                productPrice.text = product.price
 
-                val adapter = ProductsDetailsAdapter(currentView, product.images)
-                imgProductViewPage.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-                imgProductViewPage.adapter = adapter
 
                 var cart = cartDao.getCartProductByProductId(product.product_id.toInt())
-                if (cart != null && cart!!.count > 0) {
-                    AddToCart.visibility = View.GONE
+                if (cart != null && cart.count > 0) {
+                    addToCart.visibility = View.GONE
                     layoutAddItem.visibility = View.VISIBLE
-                    tvProductDetailCount.text = cart!!.count.toString()
+                    tvProductDetailCount.text = cart.count.toString()
 
                 }
                 btnSubProduct.setOnClickListener {
@@ -103,7 +105,7 @@ class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView 
                                 }
 
                             }
-                            AddToCart.visibility = View.VISIBLE
+                            addToCart.visibility = View.VISIBLE
                             layoutAddItem.visibility = View.GONE
                         } else {
                             cart!!.count = cart!!.count - 1
@@ -119,8 +121,8 @@ class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView 
                         tvProductDetailCount.text = cart!!.count.toString()
                     }
                 }
-                AddToCart.setOnClickListener {
-                    AddToCart.visibility = View.GONE
+                addToCart.setOnClickListener {
+                    addToCart.visibility = View.GONE
                     layoutAddItem.visibility = View.VISIBLE
                     val cartItem = CartProduct(
                         null,
@@ -139,13 +141,22 @@ class ProductDetailsFragment : Fragment(), ProductDetailsMVP.ProductDetailsView 
                         cart = cartDao.getCartProductByProductId(product.product_id.toInt())
                     }
                 }
-                parametersList = product.specifications
-                parametersAdapter = ParametersAdapter(parametersList)
-                recyclerViewParameters.layoutManager =
-                    LinearLayoutManager(currentView.context)
+                specificationList = product.specifications
+                parametersAdapter = ParametersAdapter(specificationList)
+                recyclerViewParameters.layoutManager = LinearLayoutManager(currentView.context)
                 recyclerViewParameters.adapter = parametersAdapter
 
-                //TODO reviewList
+                reviewList = product.reviews
+                reviewAdapter = ReviewAdapter(reviewList)
+                recyclerViewCustomerReview.layoutManager = LinearLayoutManager(currentView.context)
+                recyclerViewCustomerReview.adapter = reviewAdapter
+
+                imageList = product.images
+                Imageadapter = ProductsDetailsAdapter(currentView.context,imageList)
+                recyclerViewImage.layoutManager = LinearLayoutManager(currentView.context,RecyclerView.HORIZONTAL, false)
+                recyclerViewImage.adapter = Imageadapter
+
+
 
             }
         }

@@ -84,7 +84,7 @@ class CheckoutSummaryFragment : Fragment(), PlaceOrderMVP.PlaceOrderView {
             view.findViewById<TextView>(R.id.txt_summary_address).text = address
         }
 
-        val btnPlaceOrder : Button =view.findViewById(R.id.btn_cart_place_order)
+        val btnPlaceOrder : Button =view.findViewById(R.id.btn_summary_confirm_place)
         btnPlaceOrder.setOnClickListener{
             val userId = sharedPreferences.getString(LoginActivity.USER_ID, "-1")
             userId?.let{

@@ -44,16 +44,16 @@
                 app:layout_constraintTop_toBottomOf="@id/txt_product_details_name" />
 
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/product_detail_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layoutDirection="ltr"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/txt_product_details_desc" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_product_details_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/view_product_image"
+            tools:itemCount="1"
+            app:layout_constraintTop_toBottomOf="@id/txt_product_details_desc" />
 
-
-            <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_product_details_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                 android:textColor="@color/blue"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_detail_image_view" />
+                app:layout_constraintTop_toBottomOf="@id/recyclerView_product_details_image" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_add_to_cart"
@@ -126,7 +126,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_parameters"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:itemCount="8"
             app:layout_constraintTop_toBottomOf="@id/txt_parameters_details"
@@ -144,10 +144,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView_customer_review"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_customer_review"
-            app:layout_constraintBottom_toBottomOf="parent"
             tools:listitem="@layout/view_user_review" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -80,4 +80,5 @@
     <string name="order">Order</string>
     <string name="order_details">Order Details</string>
     <string name="payment_option">Payment Option</string>
+    <string name="details">Details</string>
 </resources>

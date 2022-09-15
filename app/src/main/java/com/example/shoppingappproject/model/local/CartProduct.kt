@@ -2,7 +2,7 @@ package com.example.shoppingappproject.model.local
 
 
 data class CartProduct(
-    var cartId: Int?,
+    var cartId: Long?,
     val productName: String,
     val productId: String,
     val description: String,

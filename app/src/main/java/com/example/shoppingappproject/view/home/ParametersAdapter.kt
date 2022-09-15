@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoppingappproject.model.remote.data.productDetails.Parameters
+import com.example.shoppingappproject.model.remote.data.productDetails.Specification
 import com.example.shoppingappproject.R
 
 class ParametersAdapter(
-    val parametersArrayList:ArrayList<Parameters>)
+    val paraArrayList:ArrayList<Specification>)
     :RecyclerView.Adapter<ParametersAdapter.ParametersViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParametersViewHolder {
@@ -18,19 +18,19 @@ class ParametersAdapter(
 
     }
 
-    override fun getItemCount() = parametersArrayList.size
+    override fun getItemCount() = paraArrayList.size
 
     override fun onBindViewHolder(holder: ParametersViewHolder, position: Int) {
         holder.apply{
-            val list = parametersArrayList.get(position)
+            val list = paraArrayList[position]
             txtParameterTitle.text = list.title
-            txtParameterDetails.text = list.details
+            txtParameterDetails.text = list.specification
         }
     }
 
 
 
-    inner class ParametersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ParametersViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val txtParameterTitle : TextView = view.findViewById(R.id.txt_parameter_title)
         val txtParameterDetails :TextView = view.findViewById(R.id.txt_parameter_details)
     }

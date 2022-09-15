@@ -3,7 +3,7 @@ package com.example.shoppingappproject.model.local
 object Constants {
 
     const val DB_NAME = "Shopping_App_DB"
-    const val DB_VERSION = 1
+    const val DB_VERSION = 2
     const val TABLE_NAME = "cartProduct"
 
     val CREATE_CART_TABLE = """CREATE TABLE cartProduct (
@@ -13,7 +13,7 @@ object Constants {
         description TEXT,
         price DOUBLE,
         categoryId TEXT,
-        sbCategoryId TEXT,
+        subCategoryId TEXT,
         productImageUrl TEXT,
         count INTEGER
        

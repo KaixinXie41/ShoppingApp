@@ -11,26 +11,26 @@ class CartDao(private val context: Context){
     private val dbHelper = DBHelper(context)
     private val db:SQLiteDatabase = dbHelper.writableDatabase
 
-    fun addCart(cartProduct: CartProduct):Int{
+    fun addCart(cartProduct: CartProduct):Long{
         val contentValues = ContentValues()
         contentValues.apply {
-            put("cardId", cartProduct.cartId)
+
             put("productName", cartProduct.productName)
             put("productId", cartProduct.productId)
-            put("productImageUrl0",cartProduct.productImageUrl)
+            put("productImageUrl",cartProduct.productImageUrl)
             put("categoryId",cartProduct.categoryId)
             put("subCategoryId",cartProduct.subCategoryId)
             put("price",cartProduct.price)
             put("count",cartProduct.count)
             put("description",cartProduct.description)
         }
-        return db.insert(TABLE_NAME, null, contentValues).toInt()
+        return db.insert(TABLE_NAME, null, contentValues)
     }
 
     fun updateCartProduct(cartProduct: CartProduct):Boolean{
         val contentValues = ContentValues()
         contentValues.apply {
-            put("cardId", cartProduct.cartId)
+            put("cartId", cartProduct.cartId)
             put("productName", cartProduct.productName)
             put("productId", cartProduct.productId)
             put("productImageUrl",cartProduct.productImageUrl)
@@ -44,7 +44,7 @@ class CartDao(private val context: Context){
         return numOfChange == 1
     }
 
-    fun deleteCartProduct(cartId: Int):Boolean{
+    fun deleteCartProduct(cartId: Long):Boolean{
         val numOfChange : Int = db.delete(TABLE_NAME, "cartId = $cartId", null)
         return numOfChange == 1
     }
@@ -55,7 +55,7 @@ class CartDao(private val context: Context){
     fun getCartProduct(cartId: Int):CartProduct?{
         val cursor : Cursor = db.query(TABLE_NAME, null,"cartId =?", arrayOf("$cartId"), null, null, null )
         if(cursor.moveToFirst()){
-            val cartId = cursor.getInt(cursor.getColumnIndex("cartId"))
+            val cartId = cursor.getLong(cursor.getColumnIndex("cartId"))
             val productName = cursor.getString(cursor.getColumnIndex("productName"))
             val productId = cursor.getString(cursor.getColumnIndex("productId"))
             val description = cursor.getString(cursor.getColumnIndex("description"))
@@ -75,7 +75,7 @@ class CartDao(private val context: Context){
         val cursor:Cursor = db.query(TABLE_NAME, null,null,null,null,null,null)
         if(cursor.moveToFirst()){
             do{
-            val cartId = cursor.getInt(cursor.getColumnIndex("cartId"))
+            val cartId = cursor.getLong(cursor.getColumnIndex("cartId"))
             val productName = cursor.getString(cursor.getColumnIndex("productName"))
             val productId = cursor.getString(cursor.getColumnIndex("productId"))
             val description = cursor.getString(cursor.getColumnIndex("description"))
@@ -94,7 +94,7 @@ class CartDao(private val context: Context){
     fun getCartProductByProductId(productId:Int):CartProduct?{
         val cursor : Cursor = db.query(TABLE_NAME, null,"productId =?", arrayOf("$productId"), null, null, null )
         if(cursor.moveToFirst()){
-            val cartId = cursor.getInt(cursor.getColumnIndex("cartId"))
+            val cartId = cursor.getLong(cursor.getColumnIndex("cartId"))
             val productName = cursor.getString(cursor.getColumnIndex("productName"))
             val productId = cursor.getString(cursor.getColumnIndex("productId"))
             val description = cursor.getString(cursor.getColumnIndex("description"))

@@ -30,12 +30,12 @@
         android:id="@+id/recycleView_Cart_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_cart_place_order"
+        app:layout_constraintBottom_toTopOf="@id/btn_place_order"
         app:layout_constraintTop_toBottomOf="@id/tv_cart_fragment_total_amount"
         tools:listitem="@layout/view_cart" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_cart_place_order"
+        android:id="@+id/btn_place_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

@@ -32,6 +32,7 @@ class ProductFragment(val productList:ArrayList<Product>, val from:Int) : Fragme
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.e("productList", "$productList")
+        currentView = view
         productAdapter= ProductsAdapter(currentView.context, productList, from)
         currentView.findViewById<RecyclerView>(R.id.recyclerView_sub_product).layoutManager = LinearLayoutManager(currentView.context)
         currentView.findViewById<RecyclerView>(R.id.recyclerView_sub_product).adapter = productAdapter

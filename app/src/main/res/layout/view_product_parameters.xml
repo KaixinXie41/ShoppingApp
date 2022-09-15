@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_parameter_details"
         android:textSize="15sp"
-        android:text="@string/title"
+        android:text="@string/details"
         android:textColor="@color/black"
         android:gravity="center"
         app:layout_constraintStart_toEndOf="@id/txt_parameter_title"

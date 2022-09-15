@@ -21,7 +21,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtTitle"
+            android:id="@+id/txt_review_title"
             tools:text="@string/review_title"
             style="@style/BasicTextViewStyle"
             app:layout_constraintTop_toBottomOf="@id/txtUserName"
@@ -30,15 +30,15 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtPrice"
+            android:id="@+id/txt_review"
             tools:text ="@string/review_details"
-            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@id/txt_review_title"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingBar"
+            android:id="@+id/review_ratingBar"
             android:rating="4.5"
             style="@style/Widget.AppCompat.RatingBar.Indicator"
             app:layout_constraintEnd_toEndOf="parent"

@@ -46,7 +46,7 @@ class ProductsAdapter(
             txtName.text = products.product_name
             txtDecs.text = products.description
             txtPrice.text = products.price
-            rating.rating = products.average_rating.toFloat()
+            ratingBar.rating = products.average_rating.toFloat()
             Log.e("product_image_url", BASE_IMAGE_URL + products.product_image_url)
 
             Glide.with(context)
@@ -61,8 +61,8 @@ class ProductsAdapter(
             btnSub.setOnClickListener {
                 if(cartDetails!= null){
                     if(cartDetails!!.count <2){
-                        cartDetails!!.count.let{ item ->
-                            if(cartDao.deleteCartProduct(item.toInt())){
+                        cartDetails!!.cartId?.let{ item ->
+                            if(cartDao.deleteCartProduct(item)){
                                 Log.e("Delete", "Delete cart id= ${cartDetails!!.cartId} name = ${cartDetails!!.productName} success" )
                             }
                         }
@@ -99,7 +99,7 @@ class ProductsAdapter(
                 cartProduct.cartId = cartDao.addCart(cartProduct)
                 if (cartProduct.cartId !=null && cartProduct.cartId!! >0){
                     txtCount.text = "1"
-                    cartDetails = cartDao.getCartProductByProductId(cartProduct.productId.toInt())
+                    cartDetails = cartDao.getCartProductByProductId(products.product_id.toInt())
                 }
             }
             itemView.setOnClickListener{ p0->
@@ -125,7 +125,7 @@ class ProductsAdapter(
         val txtName: TextView = binding.txtProductName
         val txtDecs: TextView = binding.txtProductDesc
         val txtPrice : TextView = binding.txtPrice
-        val rating:RatingBar = binding.ratingBar
+        val ratingBar:RatingBar = binding.ratingBar
         val layout: ConstraintLayout = binding.layoutAddToCart
         val btnAdd: ImageButton = binding.btnPlus
         val btnSub: ImageButton = binding.btnMin

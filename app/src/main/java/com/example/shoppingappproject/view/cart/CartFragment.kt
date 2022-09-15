@@ -26,6 +26,7 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_cart, container, false)
     }
 
@@ -35,21 +36,22 @@ class CartFragment : Fragment() {
         currentView = view
         cartDao = CartDao(view.context)
         cartProductList = cartDao.getAllCartProduct()
-        val totalAmount = 0.0
+        var total = 0.0
         for (i in 0 until cartProductList.size) {
-            view.findViewById<TextView>(R.id.tv_cart_fragment_total_amount).text =
-                totalAmount.toString()
-            adapter = CartAdapter(view.context, cartProductList)
-            currentView.findViewById<RecyclerView>(R.id.recycleView_Cart_list).layoutManager =
-                LinearLayoutManager(view.context)
-            currentView.findViewById<RecyclerView>(R.id.recycleView_Cart_list).adapter = adapter
-
-            val btnCartPlaceOrder: Button = view.findViewById(R.id.btn_cart_place_order)
-            btnCartPlaceOrder.setOnClickListener{
-                val action = CartFragmentDirections.actionPlaceOrder()
-                currentView.findNavController().navigate(action)
-            }
-
+            val cartProduct = cartProductList[i]
+            total += cartProduct.price * cartProduct.count
         }
+        view.findViewById<TextView>(R.id.tv_cart_fragment_total_amount).text =
+            total.toString()
+        adapter = CartAdapter(view.context, cartProductList)
+        currentView.findViewById<RecyclerView>(R.id.recycleView_Cart_list).layoutManager = LinearLayoutManager(view.context)
+        currentView.findViewById<RecyclerView>(R.id.recycleView_Cart_list).adapter = adapter
+
+        val btnPlaceOrder: Button = view.findViewById(R.id.btn_place_order)
+        btnPlaceOrder.setOnClickListener {
+            val action = CartFragmentDirections.actionPlaceOrder()
+            currentView.findNavController().navigate(action)
+        }
+
     }
 }

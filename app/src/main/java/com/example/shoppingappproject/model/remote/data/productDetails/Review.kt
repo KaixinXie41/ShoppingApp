@@ -1,6 +1,11 @@
 package com.example.shoppingappproject.model.remote.data.productDetails
 
+import android.media.Rating
+
 data class Review(
-    val userName:String,
-    val reviewTime:String
+    val fullName:String,
+    val reviewTime:String,
+    val reviewTitle:String,
+    val review:String,
+    val average_rating : String
 )

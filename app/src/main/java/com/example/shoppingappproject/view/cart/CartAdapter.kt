@@ -25,6 +25,7 @@ class CartAdapter(private val context: Context,private val cartArrayList:ArrayLi
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         binding = ViewCartBinding.inflate(layoutInflater,parent,false)
+        cartDao = CartDao(parent.context)
         return CartViewHolder(binding.root)
     }
 
@@ -35,7 +36,7 @@ class CartAdapter(private val context: Context,private val cartArrayList:ArrayLi
             txtDecs.text = carts.description
             txtPrice.text = carts.price.toString()
             txtTotalPrice.text = (carts.price * carts.count).toString()
-            imgUrl = "$BASE_IMAGE_URL${carts.productImageUrl}"
+            Log.e("product_image_url", BASE_IMAGE_URL+carts.productImageUrl)
 
             Glide.with(context)
                 .load(BASE_IMAGE_URL + carts.productImageUrl)
@@ -48,11 +49,13 @@ class CartAdapter(private val context: Context,private val cartArrayList:ArrayLi
 
             btnSub.setOnClickListener{
                 if(cartDetails != null){
-                if(cartDetails.count<2){
-                    cartDetails.cartId?.let{
-                        item ->
-                        if(cartDao.deleteCartProduct(item)){
-                            Log.e("Delete", "Delete cart id= ${cartDetails.cartId} name = ${cartDetails.productName} success" )
+                    if(cartDetails.count<2){
+                    cartDetails.cartId?.let { item ->
+                        if (cartDao.deleteCartProduct(item)) {
+                            Log.e(
+                                "Delete",
+                                "Delete cart id= ${cartDetails.cartId} name = ${cartDetails.productName} success"
+                            )
                             notifyItemRemoved(position)
                             cartArrayList.removeAt(position)
                             notifyItemRangeChanged(position, cartArrayList.size)
@@ -86,15 +89,15 @@ class CartAdapter(private val context: Context,private val cartArrayList:ArrayLi
     }
 
     inner class CartViewHolder(val view: View):RecyclerView.ViewHolder(view) {
-         val imgCart :ImageView = binding.imgCart
-         val txtName: TextView = binding.txtProductName
-         val txtDecs:TextView = binding.txtProductDesc
-         val txtPrice :TextView = binding.txtPrice
-         val txtTotalPrice :TextView = binding.txtTotalPrice
-         val txtCount: TextView = binding.txtProductCount
-         val btnAdd:ImageButton = binding.btnPlus
-         val btnSub:ImageButton = binding.btnMin
-         lateinit var imgUrl :String
+        val imgCart: ImageView = binding.imgCart
+        val txtName: TextView = binding.txtProductName
+        val txtDecs: TextView = binding.txtProductDesc
+        val txtPrice: TextView = binding.txtPrice
+        val txtTotalPrice: TextView = binding.txtTotalPrice
+        val txtCount: TextView = binding.txtProductCount
+        val btnAdd: ImageButton = binding.btnPlus
+        val btnSub: ImageButton = binding.btnMin
+        lateinit var imgUrl: String
 
     }
 }

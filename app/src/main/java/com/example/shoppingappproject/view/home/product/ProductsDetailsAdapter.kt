@@ -1,15 +1,19 @@
 package com.example.shoppingappproject.view.home.product
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.shoppingappproject.R
+import com.example.shoppingappproject.model.remote.Constants
+import com.example.shoppingappproject.model.remote.Constants.BASE_IMAGE_URL
 import com.example.shoppingappproject.model.remote.data.productDetails.Image
 
 class ProductsDetailsAdapter(
-    val currentView: View,
+    private val context: Context,
     private val imageList: ArrayList<Image>)
     :RecyclerView.Adapter<ProductsDetailsAdapter.ProductDetailsViewHolder>(){
 
@@ -22,16 +26,14 @@ class ProductsDetailsAdapter(
     override fun getItemCount() = imageList.size
 
     override fun onBindViewHolder(holder: ProductDetailsViewHolder, position: Int) {
-        holder.bind(position)
+        holder.apply {
+            Glide.with(context)
+                .load(BASE_IMAGE_URL +imageList[position+1].image)
+                .into(imageProduct)
+        }
     }
 
     inner class ProductDetailsViewHolder(private val view:View):RecyclerView.ViewHolder(view) {
-        fun bind(position: Int){
-
-            Glide.with(currentView)
-                .load(com.example.shoppingappproject.model.remote.Constants.BASE_IMAGE_URL+imageList.get(position).image)
-                .into(view.findViewById(R.id.imgProductDetails))
-        }
-
+       val imageProduct :ImageView = view.findViewById(R.id.imgProductDetails)
     }
 }
