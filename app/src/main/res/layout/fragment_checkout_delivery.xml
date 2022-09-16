@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sunset"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.cart.CheckoutDeliveryFragment">
 
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_add_address"
         android:text="@string/add_new_address"
-        android:background="@drawable/support_btn_bg"
+        android:background="@drawable/btn_fire_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="80dp"/>
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_next_page"
         android:text="@string/next"
-        android:background="@drawable/support_btn_bg"
+        android:background="@drawable/btn_fire_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="80dp"/>

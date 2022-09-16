@@ -48,21 +48,11 @@ class CheckoutPaymentFragment : Fragment() {
             val checkRadioButton = group.findViewById<RadioButton>(group.checkedRadioButtonId)
             checkRadioButton?.let {
                 when (checkRadioButton.id) {
-                    R.id.rtn_cod -> {
-                        payment = "Cash on Delivery"
-                    }
-                    R.id.rtn_dc_cc -> {
-                        payment = "Debit Card or Credit Card"
-                    }
-                    R.id.rtn_oba -> {
-                        payment = "Online Bank Account"
-                    }
-                    R.id.rtn_paypal -> {
-                        payment = "Paypal"
-                    }
-                    else -> {
-                        payment = "Cash on Delivery"
-                    }
+                    R.id.rtn_cod -> { payment = "Cash on Delivery" }
+                    R.id.rtn_dc_cc -> { payment = "Debit Card or Credit Card" }
+                    R.id.rtn_oba -> { payment = "Online Bank Account" }
+                    R.id.rtn_paypal -> { payment = "Paypal" }
+                    else -> { payment = "Cash on Delivery" }
                 }
             }
         val btnNextStep: Button = currentView.findViewById(R.id.payment_btnNext)

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -21,6 +22,7 @@ import com.example.shoppingappproject.databinding.ActivityMainBinding
 import com.example.shoppingappproject.model.remote.VolleyHandler
 import com.example.shoppingappproject.presenter.logout.LogoutMVP
 import com.example.shoppingappproject.presenter.logout.LogoutPresenter
+import com.example.shoppingappproject.view.supportChat.SupportChatActivity
 
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.progressindicator.CircularProgressIndicator
@@ -86,10 +88,17 @@ class MainActivity : AppCompatActivity(), LogoutMVP.LogoutView {
             drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+
     }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val intent:Intent = Intent(this@MainActivity, SupportChatActivity::class.java)
+        when(item.itemId){
+            R.id.btnChat ->
+                startActivity(intent)
+        }
         return super.onOptionsItemSelected(item)
     }
 

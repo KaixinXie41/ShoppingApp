@@ -5,4 +5,9 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:title="@string/searchTitle"
         app:showAsAction="always"/>
+    <item android:id="@+id/btnChat"
+        android:icon="@drawable/ic_baseline_support_agent_24"
+        android:title="@string/support"
+        app:showAsAction="always"/>
+
 </menu>

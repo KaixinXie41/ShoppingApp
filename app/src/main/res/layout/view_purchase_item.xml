@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="#CFF9C6"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -26,6 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_unit_Price"
         android:text="@string/product_unit_price"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/txt_product_name"
         app:layout_constraintStart_toEndOf="@id/img_cart"/>
@@ -35,6 +35,7 @@
         android:id="@+id/txt_Quantity"
         android:text="@string/product_quantity"
         android:textSize="15sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txt_unit_Price"
         app:layout_constraintStart_toEndOf="@id/img_cart"/>
 
@@ -44,6 +45,7 @@
         android:id="@+id/txt_total_price"
         android:text="@string/total_price"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txt_Quantity"
         app:layout_constraintStart_toEndOf="@id/img_cart"/>
     <androidx.appcompat.widget.AppCompatTextView
@@ -52,6 +54,7 @@
         android:id="@+id/txt_unit_Price_value"
         android:text="@string/product_unit_price"
         android:textSize="15sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txt_product_name"
         app:layout_constraintStart_toEndOf="@id/txt_total_price"/>
     <androidx.appcompat.widget.AppCompatTextView
@@ -60,6 +63,7 @@
         android:id="@+id/txt_Quantity_value"
         android:text="@string/product_quantity"
         android:textSize="15sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txt_unit_Price"
         app:layout_constraintStart_toEndOf="@id/txt_total_price"/>
 
@@ -68,6 +72,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_total_price_value"
         android:text="@string/total_price"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/txt_Quantity"
         app:layout_constraintStart_toEndOf="@id/txt_total_price"/>

@@ -18,7 +18,7 @@
 
     <style name =  "BasicTextViewStyle" parent="android:Widget.TextView">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#578EF9</item>
+        <item name="android:textColor">#9BDDF9</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">casual</item>
     </style>

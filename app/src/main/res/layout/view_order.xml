@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
-    android:background="#EAF9C8"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -50,6 +49,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_order_amount"
         android:text="@string/order_amount"
+        android:textColor="@color/black"
         style="@style/BasicTextViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -59,6 +59,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_order_status"
         android:text="@string/order_status"
+        android:textColor="@color/black"
         style="@style/BasicTextViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

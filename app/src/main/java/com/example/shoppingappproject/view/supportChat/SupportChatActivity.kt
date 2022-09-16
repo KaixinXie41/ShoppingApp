@@ -2,11 +2,8 @@ package com.example.shoppingappproject.view.supportChat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shoppingappproject.databinding.ActivitySupportChatBinding
-import com.example.shoppingappproject.model.remote.OperationalCallback
 import com.example.shoppingappproject.view.Other.SupportChat
 import com.example.shoppingappproject.view.Other.SupportChatSenderData
 import com.google.firebase.database.*
@@ -43,15 +40,8 @@ class SupportChatActivity : AppCompatActivity() {
         setContentView(binding.root)
         fetchNotes()
         addMoreChat()
-        initView()
     }
 
-    private fun initView(){
-        chatAdapter.setOnItemClickListener(object : SupportChatAdapter.OnItemClickListener{
-            override fun onItemClickListener(position: Int) {
-            }
-        })
-    }
 
 
 
@@ -83,10 +73,11 @@ class SupportChatActivity : AppCompatActivity() {
                             LinearLayoutManager(this@SupportChatActivity)
                         recyclerViewSupport.adapter = chatAdapter
                     }
-                    if(items.size ==1){
-                        addSupportChat()
+                    if(items.size == 1){
+                        addSupportChat().apply {
+                            chatAdapter = SupportChatAdapter(this@SupportChatActivity, items, supportChatSenderData2)
+                        }
                     }
-
                 }
             }
         })

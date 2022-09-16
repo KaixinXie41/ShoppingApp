@@ -3,37 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/address_bg.xml" value="0.1" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/btn_fire_color.xml" value="0.124" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/btn_long_bg.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.137" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.133" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_exposure_neg_1_24.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_saved_search_24.xml" value="0.136" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.136" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.137" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/ic_baseline_support_agent_24.xml" value="0.136" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/raido_btn_style.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/sender_bg.xml" value="0.137" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/splash_bg.xml" value="0.134" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/support_bg.xml" value="0.137" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/drawable/support_btn_bg.xml" value="0.137" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_login.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_register.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/activity_support_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/add_address.xml" value="0.253125" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_cart.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_cart.xml" value="0.21" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_check_out_cart_product.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_delivery.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_payment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_payment.xml" value="0.25" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_payment_frgament.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_summary.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_checkout_summary.xml" value="0.22" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_order.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_order2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_order_details.xml" value="0.1" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_order_details.xml" value="0.22" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_order_details2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_parameters.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_product.xml" value="0.2359375" />
@@ -44,8 +51,8 @@
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/fragment_sub_category.xml" value="0.1" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/nav_header.xml" value="0.25" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_address.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_cart.xml" value="0.1" />
-        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_home.xml" value="0.1" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_cart.xml" value="0.33" />
+        <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_home.xml" value="0.22" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_order.xml" value="0.2076923076923077" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_product.xml" value="0.253125" />
         <entry key="..\:/Users/KaixinXie/AndroidStudioProjects/ShoppingAppProject/app/src/main/res/layout/view_product_image.xml" value="0.25416666666666665" />

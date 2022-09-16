@@ -77,7 +77,7 @@ class CheckoutSummaryFragment : Fragment(), PlaceOrderMVP.PlaceOrderView {
         val address = sharedPreferences.getString(ADDRESS,"None")
 
         if(payment != null){
-            view.findViewById<TextView>(R.id.txt_summary_total_bill_amount_value).text = payment
+            view.findViewById<TextView>(R.id.txt_payment_info).text = payment
         }
         if(address != null && title != null){
             view.findViewById<TextView>(R.id.txt_summary_address_title).text = title

@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#EFFAF6"
+    android:background="@drawable/register"
     android:padding="10dp"
-    android:layout_margin="10dp"
     tools:context=".view.Other.RegistrationActivity">
 
     <TextView
@@ -15,10 +14,11 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/registration"
-        android:textColor="@color/purple_200"
-        android:textSize="@dimen/medium_text_size"
+        android:textColor="#F97E40"
+        android:textSize="40sp"
+        android:fontFamily="casual"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/edtName" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edtName"
@@ -26,10 +26,14 @@
         android:layout_height="wrap_content"
         android:hint="@string/app_enter_name"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/edtMobile"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edtMobile"
@@ -37,9 +41,14 @@
         android:layout_height="wrap_content"
         android:hint="@string/app_enter_mobile"
         android:gravity="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+        app:layout_constraintBottom_toTopOf="@id/edtEmail"/>
 
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -48,9 +57,14 @@
         android:layout_height="wrap_content"
         android:hint="@string/app_enter_email"
         android:gravity="center"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMobile" />
+        app:layout_constraintBottom_toTopOf="@id/edtPassword"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edtPassword"
@@ -60,17 +74,26 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintBottom_toTopOf="@id/btnRegister"/>
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtGoToLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/circularProgress"
@@ -88,7 +111,9 @@
         android:id="@+id/txtGoToLogin"
         android:text="@string/already_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/BasicTextViewStyle"
+        android:textSize="20sp"
+        android:textColor="#F97E40"
+        android:textStyle="bold"
         android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,11 +14,12 @@
         tools:itemCount="3"
         tools:listitem="@layout/view_sender"
         app:layout_constraintTop_toTopOf="parent"/>
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/edtMessage"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="25sp"
         android:gravity="center"
         android:hint="@string/enter_message"

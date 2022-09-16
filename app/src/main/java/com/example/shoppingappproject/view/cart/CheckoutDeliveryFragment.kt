@@ -56,8 +56,9 @@ class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddr
         addAddressPresenter = AddAddressPresenter(VolleyHandler(view.context), this)
         sharedPreferences = this.requireActivity().getSharedPreferences(Account_Information,AppCompatActivity.MODE_PRIVATE)
         editor = sharedPreferences.edit()
+        hashMap = HashMap()
         val userId = sharedPreferences.getString(USER_ID, "-1")
-       hashMap = HashMap()
+
         userId?.let{
             getAddressPresenter.getAddress(userId)
         }
@@ -65,10 +66,10 @@ class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddr
         addressRadioGroup.setOnCheckedChangeListener(){ group:RadioGroup, checkId:Int ->
             val radioButtonCheck = group.findViewById<RadioButton>(group.checkedRadioButtonId)
             radioButtonCheck?.let{
-                val index = hashMap.get(radioButtonCheck.id)
+                val index = hashMap[radioButtonCheck.id]
                 if(index != null){
-                    title = addressLArrayList.get(index).title
-                    address = addressLArrayList.get(index).address
+                    title = addressLArrayList[index].title
+                    address = addressLArrayList[index].address
                 }
             }
         }
@@ -107,6 +108,10 @@ class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddr
                 }
                 dialog.dismiss()
             }
+            btnCancel.setOnClickListener{
+                dialog.dismiss()
+            }
+
         }
         dialog.show()
     }
@@ -146,6 +151,7 @@ class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddr
                     RadioGroup.LayoutParams.WRAP_CONTENT
                 )
                 rdButton.layoutParams = layout
+                rdButton.setButtonDrawable(R.drawable.raido_btn_style)
                 val spannableString = SpannableString(addressLArrayList[i].title)
                 spannableString.setSpan(
                     AbsoluteSizeSpan(20, true),
@@ -156,6 +162,11 @@ class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddr
                 rdButton.text = spannableString
                 rdButton.append("\n")
                 rdButton.append(addressLArrayList[i].address)
+                addressRadioGroup.addView(rdButton)
+                hashMap[rdButton.id] = i
+                if(i == 0){
+                    addressRadioGroup.check(rdButton.id)
+                }
              }
         }
     }

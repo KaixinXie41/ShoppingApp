@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             tools:text="@string/product_name"
             style="@style/BasicTextViewStyle"
+            android:textColor="@color/blue"
             app:layout_constraintStart_toEndOf="@id/imgProduct"
             app:layout_constraintTop_toTopOf="parent"/>
         <androidx.appcompat.widget.AppCompatTextView
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtPrice"
+            android:textColor="@color/blue"
             tools:text ="@string/price"
             app:layout_constraintTop_toBottomOf="@id/txtProductDesc"
             app:layout_constraintStart_toEndOf="@id/imgProduct"
@@ -53,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txt_add_to_cart"
+            android:textColor="@color/blue"
             android:text="@string/add_to_cart"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"

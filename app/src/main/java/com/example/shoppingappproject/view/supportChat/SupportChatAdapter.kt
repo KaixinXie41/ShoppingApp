@@ -20,7 +20,6 @@ class SupportChatAdapter(
     private val context: Context,
     private val chats:MutableList<SupportChat>,
     private val supportChatSenderData: SupportChatSenderData,
-    private var  onItemClick:OnItemClickListener ?= null
 ):RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private lateinit var supportChatViewBinding: ViewSupportChatBinding
@@ -42,35 +41,6 @@ class SupportChatAdapter(
             bindingSender = ViewSenderBinding.inflate(layoutInflater, parent, false)
             ReceiverViewHolder(bindingSender.root)
         }
-    }
-
-
-    inner class ReceiverViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val txtSender: TextView = bindingSender.txtSender
-        fun bind(position: Int) {
-            txtSender.text = chats[position].text
-        }
-    }
-
-    inner class SenderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        private val txtSender: TextView = supportChatViewBinding.txtSupport
-        private val button1: Button = supportChatViewBinding.btnMessage1
-        private val button2: Button = supportChatViewBinding.btnMessage2
-        private val button3: Button = supportChatViewBinding.btnMessage3
-
-        fun bind(position: Int) {
-            txtSender.text = chats[position].text
-            button1.text = supportChatSenderData.button1
-            button2.text = supportChatSenderData.button2
-            button3.text = supportChatSenderData.button3
-        }
-
-    }
-
-    companion object {
-        const val SENDER_VIEW = 1
-
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -111,25 +81,35 @@ class SupportChatAdapter(
 
             true
         }
-        holder.apply {
-            supportChatViewBinding.btnMessage1.setOnClickListener {
-                onItemClick!!.onItemClickListener(position)
-            }
-            supportChatViewBinding.btnMessage2.setOnClickListener {
-                onItemClick!!.onItemClickListener(position)
-            }
-            supportChatViewBinding.btnMessage3.setOnClickListener {
-                onItemClick!!.onItemClickListener(position)
-            }
+
+    }
+    inner class ReceiverViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val txtSender: TextView = bindingSender.txtSender
+        fun bind(position: Int) {
+            txtSender.text = chats[position].text
         }
     }
 
-    fun setOnItemClickListener(onItemClick: OnItemClickListener) {
-        this.onItemClick = onItemClick
+    inner class SenderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        private val txtSender: TextView = supportChatViewBinding.txtSupport
+        private val button1: Button = supportChatViewBinding.btnMessage1
+        private val button2: Button = supportChatViewBinding.btnMessage2
+        private val button3: Button = supportChatViewBinding.btnMessage3
+
+        fun bind(position: Int) {
+            txtSender.text = chats[position].text
+            button1.text = supportChatSenderData.button1
+            button2.text = supportChatSenderData.button2
+            button3.text = supportChatSenderData.button3
+
+        }
+
     }
 
-    interface OnItemClickListener {
-        fun onItemClickListener(position: Int)
+    companion object {
+        const val SENDER_VIEW = 1
 
     }
+
 }
