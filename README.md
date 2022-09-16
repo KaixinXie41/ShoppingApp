@@ -63,7 +63,7 @@ It's a basic function shoppingApp which using Api under MVP architecture with Ko
 
 #Project Structure 
 
-|——com.example.shoppingappprject    
+com.example.shoppingappprject    
 
 |—— model
 
