@@ -2,7 +2,7 @@
 It's a basic function shoppingApp which using Api under MVP architecture with Kotlin language by Android Studio Software.
 
 #This App contain below function:
-1. Add/Sub product cout.
+1. Add/Sub product cout./n
    |—— Set button clickListener on ProducAadapter and check current count number and choose update or delete method by CartDao
  
 2. Put product into shopping cart.  
