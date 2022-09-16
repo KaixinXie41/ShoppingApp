@@ -66,22 +66,18 @@ It's a basic function shoppingApp which using Api under MVP architecture with Ko
 |——com.example.shoppingappprject    
 
 |—— model
-|
-|  |—— local
-|
-|  |—— remote
-|
-|     |—— data
-|         
-|         |—— api
-|
+
+    |—— local
+    
+    |—— remote
+    
+       |—— data
+          
+       |—— api
+       
 |—— presenter
-| 
+
 |—— ui
-
-
-
-
 
 
 #These are the preview of this App：
