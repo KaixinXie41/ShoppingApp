@@ -66,45 +66,19 @@ It's a basic function shoppingApp which using Api under MVP architecture with Ko
 |——com.example.shoppingappprject    
 
 |—— model
-
-   |—— local
-   |—— remote
-   |—— data
-        |   |—— address
-|       |   |—— category
-|       |   |—— order
-|       |   |—— productdetails
-|       |   |——products
-|       |   |——subcategory
-|       |   |——user
-|       |
-|       |—— api
+|
+|  |—— local
+|
+|  |—— remote
+|
+|     |—— data
+|         
+|         |—— api
 |
 |—— presenter
-|   |—— address
-|       |——add
-|       |——get
-|   |—— category
-|   |—— login
-|   |—— logout
-|   |—— order
-|       |——details
-|       |——get
-|       |——place
-|   |—— productdetails
-|   |—— products
-|   |—— registration
-|   |—— subcategory
-|       
+| 
 |—— ui
-|   |—— cart
-|   |—— home
-|       |——homepage
-|       |——product
-|       |——subcategory
-|   |—— order
-|   |—— other
-|   |—— supportchat
+
 
 
 
