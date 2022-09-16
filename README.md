@@ -1,19 +1,92 @@
 #About ShoppingApp
 It's a basic function shoppingApp which using Api under MVP architecture with Kotlin language by Android Studio Software.
 
-This App contain below function:
+#This App contain below function:
 1. Add/Sub product cout.
-2. Put product into shopping cart.
-3. Create and save Address by user.
+   |—— Set button clickListener on ProducAadapter and check current count number and choose update or delete method by CartDao
+ 
+2. Put product into shopping cart.  
+   |—— At CartAdapter get product by productId throw CartDao when cartFragment created  will get all cart product by arrayList   
+   
+3. Create and save Address by user.  
+   |—— When customer choose AddAddress Button, show dialogView, at dialogBuilder set Save button ClickListener to save EditText value
+   
 4. Create new order by shopping cart check out systems.
+   |—— Check out Systems include 4 diffrent function at below:
+       |——Check out cart product list
+          |—— Using cartDao and recyclerView to show the list of cart item and caiculator total amount and customer able to add or delete products.
+       |——Check out Delivery option screen
+          |—— Show adress option list and offer add new address button and and pass this data to Summary screen
+       |——Check out Payment option screen
+          |—— Show payment method by radiouGroup Function and pass this data to Summary screen
+       |—— Check out Summary sceen
+          |—— Show order details and using Confirm & Place Order button to send this order to Order Fragment
+       
 5. Searching product by search function.
+   |—— Using product presenter to get product information then replace fragment to currentView by setReult. 
+   
 6. Register/Login/Logout Function
-7. Product Details and Order details Review.
-8. Payment Method Optional
+   |—— Register: check customer type in information valid or not then using presenter to apply user information by Api at VolleyHandler and getting calBack by                          callBackOperational interface, if success, intent to Login Activity.
+   |—— Login:    submit user type in email and password throw Volleyhandle and get callBack by callBackOperational interface, if success, intent to MainActivity and                    passing user data.
+   |—— Logout:   logout function is one navigation drawer menu option allow user to click it and go back to Login Activity.
+   
+   //Todo: Support Chat
 
-#Todo: Support Chat
+#Build with
+- [Kotlin](https://kotlinlang.org/) 
+- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) 
+- [GSON](https://github.com/google/gson)
+- [GSON Converter](https://github.com/square/retrofit/tree/master/retrofit-converters/gson) 
+- [Glide](https://github.com/bumptech/glide) 
+- [Android Navigation Components] (https://developer.android.com/guide/navigation/navigation-getting-started)
 
-These are the preview of this App：
+#Project Structure 
+|——com.example.shoppingappprject    
+|—— model
+|   |—— local
+|   |—— remote
+|       |—— data
+|       |   |—— address
+|       |   |—— category
+|       |   |—— order
+|       |   |—— productdetails
+|       |   |——products
+|       |   |——subcategory
+|       |   |——user
+|       |
+|       |—— api
+|
+|—— presenter
+|   |—— address
+|       |——add
+|       |——get
+|   |—— category
+|   |—— login
+|   |—— logout
+|   |—— order
+|       |——details
+|       |——get
+|       |——place
+|   |—— productdetails
+|   |—— products
+|   |—— registration
+|   |—— subcategory
+|       
+|—— ui
+|   |—— cart
+|   |—— home
+|       |——homepage
+|       |——product
+|       |——subcategory
+|   |—— order
+|   |—— other
+|   |—— supportchat
+
+
+
+
+
+#These are the preview of this App：
 
 ![screenshot_login](https://user-images.githubusercontent.com/112971217/190646617-ec4f17a7-b669-426e-b397-45e58e37f40f.png)
 ![screenshot_register](https://user-images.githubusercontent.com/112971217/190646620-141c3999-f1d6-442a-a7d4-61a9dcde8123.png)
