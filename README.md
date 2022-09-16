@@ -67,12 +67,10 @@ It's a basic function shoppingApp which using Api under MVP architecture with Ko
 
 |—— model
 
-|   |—— local
-
-|   |—— remote
-
-|       |—— data
-|       |   |—— address
+   |—— local
+   |—— remote
+   |—— data
+        |   |—— address
 |       |   |—— category
 |       |   |—— order
 |       |   |—— productdetails
