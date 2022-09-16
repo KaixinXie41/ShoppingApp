@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_2"
-    tools:context=".view.supportChat.SupportChatActivity">
+    tools:context=".view.supportchat.SupportChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

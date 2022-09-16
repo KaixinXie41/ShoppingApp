@@ -12,8 +12,8 @@ import com.example.shoppingappproject.databinding.FragmentSubCategoryBinding
 import com.example.shoppingappproject.model.remote.VolleyHandler
 import com.example.shoppingappproject.model.remote.data.subcategory.SubCategoryResponse
 import com.example.shoppingappproject.model.remote.data.subcategory.Subcategory
-import com.example.shoppingappproject.presenter.subCategory.SubCategoryMVP
-import com.example.shoppingappproject.presenter.subCategory.SubCategoryPresenter
+import com.example.shoppingappproject.presenter.subcategory.SubCategoryMVP
+import com.example.shoppingappproject.presenter.subcategory.SubCategoryPresenter
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.google.android.material.tabs.TabLayoutMediator
 

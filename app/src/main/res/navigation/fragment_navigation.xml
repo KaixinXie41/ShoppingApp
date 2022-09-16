@@ -107,7 +107,7 @@
     <fragment
         android:id="@+id/nav_order_page"
         tools:layout="@layout/fragment_order"
-        android:name="com.example.shoppingappproject.view.Order.OrderFragment"
+        android:name="com.example.shoppingappproject.view.orderview.OrderFragment"
         android:label="@string/order">
         <action
             android:id="@+id/action_order_details"
@@ -120,7 +120,7 @@
     <fragment
         android:id="@+id/nav_order_details_page"
         tools:layout="@layout/fragment_order_details"
-        android:name="com.example.shoppingappproject.view.Order.OrderFragmentDetails"
+        android:name="com.example.shoppingappproject.view.orderview.OrderFragmentDetails"
         android:label="@string/order_details">
         <argument
             android:name="orderId"

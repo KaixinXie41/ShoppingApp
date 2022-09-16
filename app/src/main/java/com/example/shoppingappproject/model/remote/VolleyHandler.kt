@@ -10,8 +10,8 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.shoppingappproject.model.remote.data.address.AddressResponse
-import com.example.shoppingappproject.model.remote.data.order.Get.OrderResponse
-import com.example.shoppingappproject.model.remote.data.productDetails.ProductDetailResponse
+import com.example.shoppingappproject.model.remote.data.order.get.OrderResponse
+import com.example.shoppingappproject.model.remote.data.productdetails.ProductDetailResponse
 import com.example.shoppingappproject.model.remote.Constants.ADD_ADDRESS_END_POINT
 import com.example.shoppingappproject.model.remote.data.user.User
 import com.example.shoppingappproject.model.remote.Constants.BASE_URL
@@ -27,7 +27,7 @@ import com.example.shoppingappproject.model.remote.Constants.REGISTRATION
 import com.example.shoppingappproject.model.remote.Constants.SEARCH_PRODUCTS_END_POINT
 import com.example.shoppingappproject.model.remote.Constants.SUB_CATEGORY_END_POINT
 import com.example.shoppingappproject.model.remote.data.category.CategoryResponse
-import com.example.shoppingappproject.model.remote.data.order.Place.PlaceOrderRequest
+import com.example.shoppingappproject.model.remote.data.order.place.PlaceOrderRequest
 import com.example.shoppingappproject.model.remote.data.order.orderDetail.OrderDetailResponse
 import com.example.shoppingappproject.model.remote.data.products.ProductsResponse
 import com.example.shoppingappproject.model.remote.data.subcategory.SubCategoryResponse

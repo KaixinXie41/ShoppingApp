@@ -12,7 +12,7 @@ import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.shoppingappproject.R
 import com.example.shoppingappproject.model.local.CartDao
-import com.example.shoppingappproject.view.Other.LoginActivity
+import com.example.shoppingappproject.view.other.LoginActivity
 
 
 class CheckoutPaymentFragment : Fragment() {

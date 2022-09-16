@@ -7,7 +7,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppingappproject.R
-import com.example.shoppingappproject.model.remote.data.productDetails.Review
+import com.example.shoppingappproject.model.remote.data.productdetails.Review
 
 class ReviewAdapter (val reviewArrayList:ArrayList<Review>)
     :RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>(){

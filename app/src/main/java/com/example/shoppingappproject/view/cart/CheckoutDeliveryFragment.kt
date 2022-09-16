@@ -23,8 +23,9 @@ import com.example.shoppingappproject.presenter.address.add.AddAddressMVP
 import com.example.shoppingappproject.presenter.address.add.AddAddressPresenter
 import com.example.shoppingappproject.presenter.address.get.GetAddressMVP
 import com.example.shoppingappproject.presenter.address.get.GetAddressPresenter
-import com.example.shoppingappproject.view.Other.LoginActivity.Companion.Account_Information
-import com.example.shoppingappproject.view.Other.LoginActivity.Companion.USER_ID
+import com.example.shoppingappproject.view.other.LoginActivity.Companion.Account_Information
+import com.example.shoppingappproject.view.other.LoginActivity.Companion.USER_ID
+
 import com.google.android.material.progressindicator.CircularProgressIndicator
 
 class CheckoutDeliveryFragment : Fragment(),GetAddressMVP.GetAddressView,AddAddressMVP.AddAddressView {

@@ -18,13 +18,13 @@
         android:theme="@style/Theme.ShoppingAppProject"
         tools:targetApi="31">
         <activity
-            android:name=".view.supportChat.SupportChatActivity"
+            android:name=".view.supportchat.SupportChatActivity"
             android:exported="false"/>
         <activity
-            android:name=".view.Other.RegistrationActivity"
+            android:name=".view.other.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".view.Other.SplashScreen"
+            android:name=".view.other.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.Other.LoginActivity"
+            android:name=".view.other.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.Other.MainActivity" />
+        <activity android:name=".view.other.MainActivity" />
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:background="@drawable/register"
     android:padding="10dp"
-    tools:context=".view.Other.RegistrationActivity">
+    tools:context=".view.other.RegistrationActivity">
 
     <TextView
         android:layout_width="match_parent"

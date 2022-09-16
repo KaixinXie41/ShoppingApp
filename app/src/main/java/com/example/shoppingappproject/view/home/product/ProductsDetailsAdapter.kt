@@ -8,9 +8,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.shoppingappproject.R
-import com.example.shoppingappproject.model.remote.Constants
 import com.example.shoppingappproject.model.remote.Constants.BASE_IMAGE_URL
-import com.example.shoppingappproject.model.remote.data.productDetails.Image
+import com.example.shoppingappproject.model.remote.data.productdetails.Image
 
 class ProductsDetailsAdapter(
     private val context: Context,
