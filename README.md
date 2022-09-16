@@ -13,15 +13,16 @@ This App contain below function:
 
 #Todo: Support Chat
 
-These are the preview of this App
-![screenshot_login](https://user-images.githubusercontent.com/112971217/190565078-17254a7b-8629-4b37-8b37-70336d9e728f.png)
-![screenshot_register](https://user-images.githubusercontent.com/112971217/190565080-2b3824b4-d57b-44c8-9a62-9adf47c93b53.png)
-![screenshot_homepage](https://user-images.githubusercontent.com/112971217/190565107-e6895ab5-29b1-493b-a052-42c9bd9405a6.png)
-![screenshot_product](https://user-images.githubusercontent.com/112971217/190565111-0dfaa306-a5da-441c-aec8-3f64c819584f.png)
-![screen_product_details](https://user-images.githubusercontent.com/112971217/190565116-7d2195a9-71b0-4bee-82cc-721bde5217b9.png)
-![screenshot_cartlist](https://user-images.githubusercontent.com/112971217/190565117-0a3c5d53-f497-468d-8851-3f3693248c22.png)
-![screenshot_add_address](https://user-images.githubusercontent.com/112971217/190565118-d39059a5-a010-4230-a26b-a9584be55191.png)
-![screenshot_payment_option](https://user-images.githubusercontent.com/112971217/190565128-d80c5f1b-35a1-4d68-b86f-0ba54dbb1909.png)
-![screenshot_order_confirm](https://user-images.githubusercontent.com/112971217/190565131-fbd9f5f9-a651-4d61-ad6e-7d5f4dfb8b80.png)
-![screenshot_orderlist](https://user-images.githubusercontent.com/112971217/190565133-d321432c-eaf1-45f4-b381-45db9470946e.png)
-![screenshot_orderdetails](https://user-images.githubusercontent.com/112971217/190565135-1527f2a8-a6e4-429a-ae58-ae6626e23830.png)
+These are the preview of this App：
+
+![screenshot_login](https://user-images.githubusercontent.com/112971217/190646617-ec4f17a7-b669-426e-b397-45e58e37f40f.png)
+![screenshot_register](https://user-images.githubusercontent.com/112971217/190646620-141c3999-f1d6-442a-a7d4-61a9dcde8123.png)
+![screenshot_homepage](https://user-images.githubusercontent.com/112971217/190646621-c472a843-169f-47df-90ae-0275ad393947.png)
+![screenshot_product](https://user-images.githubusercontent.com/112971217/190646623-bcb5da6f-db16-4f72-a951-a66793500bf1.png)
+![screen_product_details](https://user-images.githubusercontent.com/112971217/190646627-be1d2f57-c139-4c08-9be0-ec0346a7beda.png)
+![screenshot_cartlist](https://user-images.githubusercontent.com/112971217/190646628-d5e9f5aa-19e1-4492-8dca-7b71be10a1e7.png)
+![screenshot_add_address](https://user-images.githubusercontent.com/112971217/190646629-6dc84ba9-d78e-4f5e-90c5-46c9c7157ecb.png)
+![screenshot_orderlist](https://user-images.githubusercontent.com/112971217/190646653-5baf676f-d30d-497d-b335-ba24ee955b8d.png)
+![screenshot_orderdetails](https://user-images.githubusercontent.com/112971217/190646656-271b283f-6cdd-47bd-8c42-5cbbc5b3c54e.png)
+![screenshot_payment_option](https://user-images.githubusercontent.com/112971217/190646657-4b0de220-4200-4995-b8df-398091437809.png)
+![screenshot_order_confirm](https://user-images.githubusercontent.com/112971217/190646659-fdb6489f-a9c6-4387-9003-684cfa66435f.png)
